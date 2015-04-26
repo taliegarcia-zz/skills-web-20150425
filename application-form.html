@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-
+		<!-- Page title -->
 		<title>Application Form</title>
-	
+
+		<!-- Link to style.css -->
+		<link rel="stylesheet" href="./static/style.css">
+
 	</head>
 
 	<body>
@@ -11,6 +14,8 @@
 		<h2>Thank you for your interest in joining Balloonicorns Unlimited.</h2>
 		<br>
 
+		<!-- Instructions Box -->
+		<div id="instructions">
 		<p>We are currently seeking passionate Balloongineers to fill the following positions:</p>
 			<ul>
 				<li>Software Engineer</li>
@@ -18,28 +23,30 @@
 				<li>Product Manager</li>
 			</ul>
 
-		<p>If you think you have that magic sparkle we seek,</p>
-		<p>please fill out the form below. Be sure to include your</p>
-		<p>salary expectations and job title.</p>
+		<p>If you think you have that magic sparkle we seek, please fill out the form below. Be sure to include your salary expectations and job title.
+		</p>
+		</div>
+		<br>
+		<br>
 
+		<!-- App Form starts here -->
 		<h3>Application Form</h3>
 	
-		<form action="/application" method="POST">
-			<br>
+		<form action="/application" method="POST" id="form">
 
 			<br>
 			<label for="field-firstname">First Name:</label>
-				<input type="text" name="firstname">
+				<input type="text" name="firstname" id="firstname">
 			<br>
 			
 			<br>
 			<label for="field-lastname">Last Name:</label>
-				<input type="text" name="lastname">
+				<input type="text" name="lastname" id="lastname">
 			<br>
 			
 			<br>
 			<label for="field-salaryreq">Salary Requirements:</label>
-				<input type="text" name="salaryreq">
+				<input type="text" name="salaryreq" id="salaryreq">
 			<br>
 			
 			<br>
@@ -52,7 +59,7 @@
 			<br>
 			
 			<br>	
-			<input type="submit">
+			<input type="submit" id="submit">
 		
 		</form>
 	</body>
