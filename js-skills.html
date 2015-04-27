@@ -444,13 +444,11 @@ var reversey = document.getElementById("reverse-string-button")
   }
 
   function guessNumber(evt) {
+    var guess
     playing = true;
     console.log("random", randomNumber)
 
-  // prompt the user to guess the number 
-    var guess // = prompt("Guess what number I'm thinking of...(hint: between 1 and 100): " );
-    //console.log("guess", guess);
-
+  // prompt the user to guess the number while playing = true
     while (playing) {
       guess = prompt("Guess what number I'm thinking of...(hint: between 1 and 100): " );
       console.log("guess", guess);
@@ -512,6 +510,55 @@ var reversey = document.getElementById("reverse-string-button")
 
 <script>
   // put your code here
+  // "Play!" button does nothing right now so no need for .preventDefault
+  var randomNumber2 ;
+  var guess2 ;
+
+  $("#play-guessing-game-2").on('click', startGame2); //works
+  console.log("random", randomNumber);
+
+  function startGame2(evt) {
+    randomNumber2 = Math.floor(Math.random() * (101 - 1)) + 1;
+    playing = true;
+    $("#play-guessing-game-2").prop("disabled", true);
+    guessNumber2();
+  }
+
+  function inputNum(evt) {
+        return guess2 = $("#number-guessed").val();
+  }
+  // 
+  function guessNumber2(evt) {
+    playing = true;
+    $("#number-guessed").prop("disabled", false);
+    $("#try-this-number").prop("disabled", false);
+    $("#guessing-game-2-form").submit(function (evt) { 
+      return evt.preventDefault();  
+    });
+    console.log("random", randomNumber2)
+    $("#try-this-number").click(inputNum);
+
+  // prompt the user to guess the number 
+  
+    // while (playing) {
+    //   if (guess2 == randomNumber2) {
+    //    playing = confirm("You won!! Press OK to play again.");
+    //    if (playing) {
+    //     startGame2();
+    //    }
+    //   }
+    // }
+  }
+  
+
+  //     } else if ( guess > randomNumber ) {
+  //       playing = confirm("Your guess was too high. Would you like to guess again?");
+  //     } else if ( guess < randomNumber ) { 
+  //       playing = confirm("Your guess was too low. Would you like to guess again?");
+  //     }
+  //   }
+  // }
+
 
 
 </script>
