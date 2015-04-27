@@ -448,19 +448,21 @@ var reversey = document.getElementById("reverse-string-button")
     console.log("random", randomNumber)
 
   // prompt the user to guess the number 
-    var guess = prompt("Guess what number I'm thinking of...(hint: between 1 and 100): " );
-    console.log("guess", guess);
+    var guess // = prompt("Guess what number I'm thinking of...(hint: between 1 and 100): " );
+    //console.log("guess", guess);
 
     while (playing) {
+      guess = prompt("Guess what number I'm thinking of...(hint: between 1 and 100): " );
+      console.log("guess", guess);
       if (guess == randomNumber) {
        playing = confirm("You won!! Press OK to play again.");
        if (playing) {
         startGame();
        }
       } else if ( guess > randomNumber ) {
-        guess = prompt("Your guess was too high. Try again:");
+        playing = confirm("Your guess was too high. Would you like to guess again?");
       } else if ( guess < randomNumber ) { 
-        guess = prompt("Your guess was too low. Try again:");
+        playing = confirm("Your guess was too low. Would you like to guess again?");
       }
     }
   }
