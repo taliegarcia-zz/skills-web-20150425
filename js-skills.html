@@ -247,7 +247,12 @@ var reversey = document.getElementById("reverse-string-button")
 </fieldset>
 
 <script>
-  
+  // $(.tricky-to-find).attr("id", "popper") // can add name or id to the item this way, then put in jQuery string with .on :
+  //$("#popper").on('click', function () { return alert("Oh no!"); });))
+
+  $('.tricky-to-find').on('click', function () { return alert("Oh no!"); });
+  // this does it all in one line. but if there were more of the tricky-to-find class they would also have thie EventListener now 
+
 </script>
 
 <div class="hint">
@@ -275,6 +280,12 @@ var reversey = document.getElementById("reverse-string-button")
 
 <script>
   // put your code here
+  function dogPic(evt) {
+    $("#kittenz-rule").attr("src", "http://www.corgicorner.com/images/corgi%20bath.jpg")
+  }
+
+  $("#kittenz-rule").on("dblclick", dogPic);
+
 </script>
 
 <div class="hint">
@@ -308,6 +319,13 @@ var reversey = document.getElementById("reverse-string-button")
 
 <script>
   // put your code here
+  function makePorc(evt) {
+    $("#cute-porcupine-image").slideUp().show(3000);
+  }
+
+  $("#make-a-porcupine").on('click', function () { return setTimeout(makePorc, 1500); });
+  
+
 </script>
 
 <div class="hint">
@@ -340,6 +358,9 @@ var reversey = document.getElementById("reverse-string-button")
 
 <script>
   // put your code here
+  var food = document.
+  $("#agreeable-text").html("I like {{ food }} too")
+
 </script>
 
 <div class="hint">
