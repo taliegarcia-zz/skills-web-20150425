@@ -97,7 +97,14 @@
 </fieldset>
 
 <script>
-  // code here for above problem
+  var popButton = document.getElementById("popup-alert-button");
+  
+  function popAlert(evt) {
+    alert("Here is that Popup you ordered...");
+  };
+
+  popButton.addEventListener('click', popAlert);
+
 </script>
 
 
@@ -112,10 +119,21 @@
   <i id="message-to-change">hello</i>
   <button id="change-hello-to-goodbye-button">Turn <b>Hello</b> Into <b>Goodbye</b></button>
   <!-- Hey, look, that was another way to do a button - what might it be good for? -->
+  <!-- .getElementsbyTagName!! If we wanted something to happen every time any button with tag_name button was pressed. -->
 </fieldset>
 
 <script>
-  // code here for above-problem
+  var message = document.getElementById("message-to-change");
+
+  var helloButton = document.getElementById("change-hello-to-goodbye-button");
+
+  function changeText(evt) {
+    message.innerText = "goodbye";
+  }
+
+  helloButton.addEventListener('click', changeText);
+  
+
 </script>
 
 <div class="hint">
