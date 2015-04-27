@@ -358,8 +358,30 @@ var reversey = document.getElementById("reverse-string-button")
 
 <script>
   // put your code here
-  var food = document.
-  $("#agreeable-text").html("I like {{ food }} too")
+  // var form = document.getElementById("agreeable-form");
+  // form.method="GET";
+  // form.action="#agreeable-form";
+  // var food = request.args.get("input");
+  // console.log(food);
+
+
+  function inputVal(evt) {
+    var food = $("#favorite-food-input").val();
+    $("#agreeable-text").html("I like " + food + ", too.");
+    //$("#agreeable-form").action("#agreeable-text");
+
+  }
+
+  $("#favorite-food-input").on("change", inputVal)
+
+  $("#agreeable-form").submit(function (evt) { 
+    return evt.preventDefault();  
+  });
+
+  //on("change", popAlert);
+ 
+
+  
 
 </script>
 
