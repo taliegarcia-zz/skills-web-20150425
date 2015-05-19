@@ -5,7 +5,7 @@
 		<title>Application Form</title>
 
 		<!-- Link to style.css -->
-		<link rel="stylesheet" href="../static/style.css">
+		<link rel="stylesheet" href="/static/style.css">
 
 	</head>
 
@@ -35,27 +35,26 @@
 		<form action="/application" method="POST" id="form">
 
 			<br>
-			<label for="field-firstname">First Name:</label>
-				<input type="text" name="firstname" id="firstname">
+			<label><input type="text" name="firstname" id="firstname">First Name:</label>
 			<br>
 			
 			<br>
-			<label for="field-lastname">Last Name:</label>
-				<input type="text" name="lastname" id="lastname">
+			<label><input type="text" name="lastname" id="lastname">Last Name:</label>
+				
 			<br>
 			
 			<br>
-			<label for="field-salary">Salary Requirements:</label>
-				<input type="text" name="salary" id="salary">
+			<label><input type="text" name="salary" id="salary">Salary Requirements:</label>
+				
 			<br>
 			
 			<br>
-			<label for="field-position">What position are you applying for?</label>
+			<label>What position are you applying for?
 				<select name="position">
 					<option value="Software-Engineer">Software Engineer</option>
 					<option value="QA-Engineer">QA Engineer</option>	
 					<option value="Product-Manager">Product Manager</option>
-				</select>
+				</select></label>
 			<br>
 			
 			<br>	
