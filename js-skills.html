@@ -171,11 +171,10 @@
 
   function formAlert(evt) {
     alert("Sorry, that form is not available right now. You are being redirected to the top of this section.");
-    form.action = "#prevent-form-submission-form"; 
-    // can use #id to get to point in page
+    evt.preventDefault();
   };
 
-  submitButton.addEventListener('click', formAlert);
+  form.addEventListener('submit', formAlert);
 
   // form.addEventListener('action', function () { return form.action = popAlert; } );
 
